@@ -1,0 +1,458 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+html{
+  width:100%;
+}
+
+body{
+  width:100%;
+    height: 100%;
+    transition: 0.2s linear;
+}
+
+
+
+.navbar-brand{
+    width:13%;
+}
+
+.navbar-brand img{
+    width:150px;
+}
+
+.navbar{
+    z-index:100;
+    position:fixed;
+    width:100%;
+    box-shadow:
+  0px 2.7px 2.2px rgba(0, 0, 0, 0.037),
+  0px 6.5px 5.3px rgba(0, 0, 0, 0.054),
+  0px 12.3px 10px rgba(0, 0, 0, 0.065),
+  0px 21.9px 17.9px rgba(0, 0, 0, 0.072),
+  0px 40.9px 33.4px rgba(0, 0, 0, 0.074),
+  0px 98px 80px rgba(0, 0, 0, 0.07)
+;
+background-color: rgba(21, 85, 187, 0.733);
+}
+
+.nav-links{
+    padding:1em 1.1em;
+}
+
+.btn{
+    transition:.3s;
+    background-color: rgb(255, 255, 255);
+}
+
+.dropdown-item{
+  font-size: clamp(.8rem, 1vw, 2rem);
+}
+
+@media (max-width:1100px) and (min-width:980px) {
+    .navbar-nav a {
+        display: none;
+    }
+    .dropdown-divider{
+        display:none;
+    }
+    .navbar-nav{
+      display:none;
+    }
+}
+
+@media(min-width:500px){
+  .nav-br{
+    display:none;
+  }
+}
+
+/* CAROUSEL SECTION */
+
+#carouselExampleCaptions{
+    display: relative;
+}
+
+.carousel-item img{
+    height: 65vh;
+    object-fit:cover;
+}
+
+.lit{
+    z-index:1;
+    bottom:40px;
+    left:20px;
+    width:50%;
+}
+
+.lit-logo{
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+.lit-text{
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-left: 20px;
+    font-size: clamp(1.4rem, 2.4vw, 3rem); 
+}
+
+/* INFO SECTION STYLES */
+
+.info-section{
+    background: rgb(101,118,163);
+    background: linear-gradient(234deg, rgba(101,118,163,1) 0%, rgba(101,60,5,0.9805672268907563) 0%, rgba(60,22,113,1) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 0%, rgba(14,3,28,1) 0%, rgba(18,4,36,0.9217436974789917) 0%, rgba(26,7,50,0.7732843137254902) 0%, rgba(41,21,106,1) 0%, rgba(0,0,0,1) 0%, rgba(6,4,11,1) 0%, rgba(25,13,46,1) 0%, rgba(31,16,56,1) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 0%, rgba(2,1,4,1) 0%, rgba(22,15,29,1) 0%, rgba(28,18,43,1) 0%, rgba(0,0,0,1) 0%, rgba(26,14,47,1) 0%, rgba(24,9,46,1) 0%, rgba(0,0,0,1) 0%, rgba(28,27,27,1) 0%, rgba(23,22,22,1) 0%, rgba(21,20,20,1) 0%, rgba(0,0,0,1) 0%, rgba(49,89,188,1) 0%, rgba(61,75,168,1) 0%, rgba(35,14,131,1) 0%, rgba(34,14,132,1) 0%, rgba(34,14,132,1) 0%, rgba(38,93,168,1) 0%, rgba(75,118,201,1) 22%, rgba(61,105,193,1) 49%, rgba(17,69,145,1) 100%, rgba(107,102,13,1) 100%, rgba(56,55,5,1) 100%, rgba(17,17,158,1) 100%, rgba(0,0,0,1) 100%, rgba(40,40,107,0.885329131652661) 100%, rgba(49,115,204,1) 100%, rgba(0,0,0,1) 100%, rgba(50,53,60,1) 100%, rgba(20,19,19,1) 100%, rgba(138,136,136,1) 100%, rgba(106,97,97,1) 100%, rgba(11,10,10,1) 100%, rgba(0,0,0,1) 100%, rgba(60,54,54,1) 100%, rgba(29,26,26,1) 100%, rgba(30,27,27,1) 100%, rgba(20,18,18,1) 100%, rgba(89,56,7,1) 100%, rgba(33,11,71,1) 100%, rgba(38,18,66,0.9861694677871149) 100%, rgba(54,33,105,0) 100%, rgba(59,29,107,1) 100%, rgba(65,25,116,1) 100%, rgba(102,47,175,1) 100%, rgba(33,15,57,1) 100%, rgba(27,8,52,1) 100%, rgba(60,31,100,0.2718837535014006) 100%, rgba(65,16,178,1) 100%);
+}
+
+.info-container{
+    width:85%;
+    margin:auto;
+    background-color: rgb(142, 198, 243);
+    border-bottom:solid 2px rgb(15, 73, 150);
+}
+
+@media(max-width:655px){
+  .info-container{
+    width:100%;
+  }
+}
+
+.info-container a{
+    font-size: clamp(.5rem, 2.8vw, 1rem); 
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(4, 2, 90);
+    width: 100%;
+    height: 100%;
+    padding: 1em 0;
+}
+  
+.info:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: rgb(49, 48, 124);
+    transition: left .3s;
+  }
+  
+  .info:hover:after {
+    left: 0;
+  }
+
+.hovered-link::after{
+    content: "";
+    position: absolute;
+    border-bottom: 4.5px solid rgb(49, 48, 124);
+    bottom: -1px;
+    left:0;
+    width: 100%;
+    z-index:1;
+  }
+
+  /* CONTACT SECTION STYLES */
+
+  .contact-container{
+      width:55%;
+      border-bottom: 1px solid rgba(0, 2, 102, 0.219);
+      margin:auto;
+      padding: 2em 0;
+  }
+
+  @media(max-width:1024px){
+    .contact-container{
+      width: 100%;
+    }
+  }
+
+  .contact-btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 3px;
+    font-family: "Open Sans";
+    font-weight: lighter;
+    font-size: clamp(.4rem, 2vw, .8rem); 
+    display: inline-block;
+    padding: 1em 1.25em;
+    margin: 0 .8em;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.1, 0.2, 1);
+  }
+  .contact-btn:hover{
+      color:white;
+  }
+  .contact-btn:before, .contact-btn:after {
+    position: absolute;
+    content: "";
+    display: block;
+  }
+  .contact-btn:before {
+    top: -120px;
+    left: 50px;
+    z-index: -1;
+    width: calc(100% + 140px);
+    height: 100px;
+    transition: all 0.4s cubic-bezier(0.25, 0.1, 0.2, 1);
+    transform: skew(70deg);
+    background: rgb(81, 141, 253);
+  }
+  .contact-btn:after {
+    top: 0;
+    left: 0;
+    z-index: -2;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border: 1px solid #fff;
+  }
+  .contact-btn:hover:before {
+    left: -50px;
+    top: -20px;
+  }
+
+  /* MAIN SECTION STYLES */
+
+
+  
+.container{
+  margin-top:5em;
+}
+
+  /* DATE CONTACT STYLES */
+
+  .date-contact{
+      display: flex;
+      align-items: center; 
+  }
+
+  .date-contact span{
+    font-size: clamp(.7rem, 1vw, 1rem);
+    font-weight:500;
+  }
+
+.contact-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: .8em 0;
+}
+
+.contact-item a{
+  color: gray;
+}
+
+  .contact-icon{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(93, 163, 243, 0.363);
+      min-width: 50px;
+      height: 50px;
+      border:1px solid rgb(27, 183, 255);
+      border-radius: 50%;
+      margin-right: 1em;
+  }
+
+/* SOCIAL MEDIA STYLES */
+
+.fb-logo {
+  padding: 1.5em 0;
+  display: flex;
+  justify-content: center;
+}
+
+.fb-link{
+  width:60px;
+  height: 60px;
+  border: 1px solid rgba(128, 128, 128, 0.356);
+  border-radius: 50%;
+  background-color: rgb(144, 192, 255);
+  font-size: 30px;
+  margin:auto;
+  text-decoration: none;
+  transition: .5s;
+}
+
+.fb-link:hover{
+  background-color: rgb(47, 107, 236);
+  color: white;
+}
+
+.fb-icon{
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* PROGRAME STUDII STYLES */
+
+.programe-studii-btn a{
+  text-decoration: none;
+}
+
+.studii-list li, .studii-list a{
+  margin: .5em 0;
+  color:gray;
+}
+
+.studii-list a:hover{
+  color: rgb(243, 53, 142);
+}
+
+/* PREZENTARE VIDOE STYLES */
+
+.embed-responsive-item{
+    width: 100%;
+    height: 500px;
+}
+
+.modal-body{
+    background-color: rgb(161, 168, 218);
+}
+
+/* LISTA ACTE STYLES */
+
+.lista-acte li{
+  list-style-type:decimal;
+}
+
+.plata-taxe-link{
+  margin: 1.5em 0;
+}
+
+/* FOOTER STYLES */
+
+footer{
+  background-color: rgb(11, 34, 70);
+  font-size: .80em;
+  color: white;
+}
+
+footer span{
+  width: 300px;
+}
+
+footer h5{
+  margin: 1em 0;
+  font-size: 17px;
+}
+
+footer a{
+  margin: .2em 0;
+  text-decoration: none;
+  color:rgb(138, 149, 247);
+}
+
+footer a:hover{
+  color:rgb(230, 230, 230);
+}
+
+footer img{
+  width: 130px;
+}
+
+.footer-btn{
+  width: 185px;
+  font-size: .9em;
+  font-weight: 700;
+}
+
+.footer-container{
+  padding: 6em 7em;
+}
+
+.footer-links button{
+  margin-right:.45em;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+}
+
+@media(max-width:1200px){
+  .footer-contact-container img, .footer-span, .footer-btn{
+    margin-bottom: 3em;
+  }
+  .footer-container{
+    padding:6em 1em;
+  }
+  .footer-span{
+    width:100%;
+  }
+  .facultati-container{
+    gap: 0;
+  }
+}
+
+@media(max-width:767px){
+  footer img{
+    width: 230px;
+    min-width:100px;
+  }
+}
+
+/* THEME TOGGLER */
+
+.theme-toggler{
+  right:50px;
+  margin-top:20px;
+}
+
+body.dark {
+  background-color: #292c35;
+  color:white;
+}
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  width: 50px;
+  height: 26px;
+  background-color:#111;
+  display: flex;
+  border-radius:50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  transform: scale(1.5);
+}
+
+.ball {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+/*  target the elemenent after the label*/
+.checkbox:checked + .label .ball{
+  transform: translateX(24px);
+}
+
+.fa-moon {
+  color: pink;
+}
+
+.fa-sun {
+  color: yellow;
+}
+
+
+
+
+
